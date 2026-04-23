@@ -2,13 +2,7 @@ package com.javanauta.usuario.infrastructure.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-
-
+import lombok.*;
 
 
 @Getter
@@ -17,6 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "endereco")
+@Builder
 public class endereco {
 
     @Id
@@ -28,8 +23,8 @@ public class endereco {
     private String numero;
     @Column(name = "complemento", length = 10)
     private String complemento;
-    @Column(name = "Estado", length = 2)
-    private String Estado;
+    @Column(name = "estado", length = 2)
+    private String estado;
     @Column(name = "cidade", length = 150)
     private String cidade;
     @Column(name = "cep", length = 9)
