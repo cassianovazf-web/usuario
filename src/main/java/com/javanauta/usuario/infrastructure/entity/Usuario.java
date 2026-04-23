@@ -27,7 +27,7 @@ public class Usuario implements UserDetails {
     public String nome;
     @Column(name = "email", length = 100)
     public String email;
-    @Column(name = "senha", length = 10)
+    @Column(name = "senha", length = 100)
     public String senha;
 
     @OneToMany(cascade = CascadeType.ALL)
